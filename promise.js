@@ -38,13 +38,13 @@ const usuarioPromise = obterUsuario()
 usuarioPromise
   .then(usuario => {
     return obterTelefone()
-      .then(result => {
+      .then(telefone => {
         return {
           usuario: {
             id: usuario.id,
             nome: usuario.nome,
           },
-          telefone: result
+          telefone
         }
       })
   })
